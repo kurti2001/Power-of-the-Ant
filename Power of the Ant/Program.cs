@@ -9,21 +9,29 @@ class Player
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Give the X position of the colony, the Y position of the colony, the ANT's X starting position and the ANT's Y starting position\n\n");
+        Console.WriteLine("Give the X position of the colony \n Enter a number from 0 to 40 ");
 
         int colonyX = Convert.ToInt32(Console.ReadLine());
 
+        Console.WriteLine("Give the  Y position of the colony \n Enter a number from 0 to 18 ");
+
         int colonyY = Convert.ToInt32(Console.ReadLine());// the Y position of the colony
 
+        Console.WriteLine("Give the ANT's X starting position \n Enter a number from 0 to 40 ");
+
         int initialX = Convert.ToInt32(Console.ReadLine());// The Ant's starting X position
+
+        Console.WriteLine("Give the ANT's Y starting position \n Enter a number from 0 to 18 ");
 
         int initialY = Convert.ToInt32(Console.ReadLine());
 
 
+     
 
         int remainingTurns = int.Parse(Console.ReadLine()); // The remaining amount of turns the Ant can move. Do not remove this line.
-        bool Destination = true;
-        while (Destination = true)
+
+
+        while (true)
         {
             int movement = 1;
 
@@ -75,7 +83,6 @@ class Player
             else if (colonyX == initialX && colonyY == initialY)
             {
                 Console.WriteLine("Ant arrived the destination");
-                Destination = false;
                 return;
             }
 
